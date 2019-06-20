@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    executer:
+        image: iotexecuterl1
+        ports:
+            - "8094:8080"
+        volumes:
+            - ./config:/tmp/config
+        network_mode: host
+        command: "executer1 application.json --server.port=8094"    
